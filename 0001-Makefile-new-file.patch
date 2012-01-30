@@ -1,0 +1,79 @@
+From 64338d2bf245fd6e166895d3ba8712d50b012f3d Mon Sep 17 00:00:00 2001
+From: Jari Aalto <jari.aalto@cante.net>
+Date: Mon, 3 Dec 2007 18:17:43 +0200
+Subject: [PATCH] Makefile: new file
+
+Signed-off-by: Jari Aalto <jari.aalto@cante.net>
+---
+ Makefile |   59 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 files changed, 59 insertions(+), 0 deletions(-)
+ create mode 100644 Makefile
+
+diff --git a/Makefile b/Makefile
+new file mode 100644
+index 0000000..cb5cff3
+--- /dev/null
++++ b/Makefile
+@@ -0,0 +1,59 @@
++#!/usr/bin/make -f
++#
++#	Copyright (C) 2007-2008 Jari Aalto
++#
++#	This program is free software; you can redistribute it and/or
++#	modify it under the terms of the GNU General Public License as
++#	published by the Free Software Foundation; either version 2 of the
++#	License, or (at your option) any later version
++#
++#	This program is distributed in the hope that it will be useful, but
++#	WITHOUT ANY WARRANTY; without even the implied warranty of
++#	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
++#	General Public License for more details.
++#
++#	Visit <http://www.gnu.org/copyleft/gpl.html>
++
++PACKAGE		= patcher
++
++DESTDIR	=
++prefix		= /usr
++exec_prefix	= $(prefix)
++man_prefix	= $(prefix)/share
++
++
++INSTALL		= /usr/bin/install
++INSTALL_BIN	= $(INSTALL) -m 755
++INSTALL_DATA	= $(INSTALL) -m 644
++INSTALL_OBJS	= $(PACKAGE)
++
++MANDIR		= $(DESTDIR)$(man_prefix)/man/man1
++BINDIR		= $(DESTDIR)$(exec_prefix)/bin
++
++DEBUG		= -g
++CC		= gcc
++GCCFLAGS	= -Wall
++CFLAGS=	= $(GCCFLAGS) $(DEBUG) -O2
++
++.PHONY: clean distclean install install-man install-bin
++
++all: foo
++
++foo:
++
++clean:
++	-rm -f *[#~] *.\#* *.o *.exe core *.stackdump
++
++distclean: clean
++
++install-bin:
++	$(INSTALL_BIN) -d $(BINDIR)
++	$(INSTALL_BIN)  $(INSTALL_OBJS) $(BINDIR)
++
++install-man:
++	$(INSTALL_BIN) -d $(MANDIR)
++	umask 022; pod2man $(PACKAGE) > $(MANDIR)/$(PACKAGE).1
++
++install: foo install-bin install-man
++
++# End of file
+-- 
+1.5.3.GIT
+

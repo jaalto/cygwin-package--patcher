@@ -1,0 +1,74 @@
+patcher
+------------------------------------------
+
+Perl script to manage patches
+
+A patch manager that keeps track of which files you change. It then
+can generate patches from your changes, no need for you to handle the
+diff tool manually. The patches can be stacked in series, they define
+the order they have to be applied. Patcher keeps series information as
+well as information of which patches have been applied and which not.
+
+Runtime requirements:
+  cygwin
+  perl
+
+Build requirements:
+  cygwin
+  perl
+
+Canonical homepage:
+  http://www.holgerschurig.de/patcher.html
+  http://packages.debian.org/patcher
+
+Canonical download:
+  See above
+
+Version control repository:
+
+Mailing List:
+
+IRC channel:
+
+Upstream contact:
+  Author: Holger Schurig <holgerschurig@gmx.de>
+  Bugs: Holger Schurig <holgerschurig@gmx.de>
+
+License:
+  Perl Artistic License
+
+Language:
+  Perl
+
+------------------------------------
+
+Build instructions:
+  unpack patcher-0.0.20040521-1-src.tar.bz2
+    if you use setup to install this src package, it will be
+    unpacked under /usr/src automatically
+  cd /usr/src
+  ./patcher*.sh all
+
+This will create:
+  patcher-0.0.20040521-1.tar.bz2
+  patcher-0.0.20040521-1-src.tar.bz2
+
+-------------------------------------------
+
+Files included in the binary distro:
+
+/usr/bin/patcher
+/usr/share/doc/Cygwin/patcher-0.0.20040521.README
+/usr/share/doc/patcher-0.0.20040521/README
+/usr/share/man/man1/patcher.1.gz
+
+------------------
+
+Port Notes:
+
+----- version 0.0.20040521-1 -----
+- Initial release 2007-12-03 Jari Aalto
+- This port is based on Debian source
+
+Cygwin port maintained by: Jari Aalto <jari.aalto@cante.net>
+Copyright (C) 2007 Jari Aalto; Licenced under GPL v2 or later

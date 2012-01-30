@@ -1,0 +1,9 @@
+sdesc: "Perl script To manage patches"
+ldesc: "A patch manager that keeps track of which files you
+change. It  then can generate patches  from your changes,  no need for
+you to  handle the diff tool  manually. The patches can  be stacked in
+series, they define  the order they have to  be applied. Patcher keeps
+series information as  well as information of which  patches have been
+applied and which not."
+category: Utils Perl
+requires: cygwin perl
