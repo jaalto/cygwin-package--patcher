@@ -16,6 +16,7 @@ Runtime requirements:
 Build requirements:
   cygwin
   perl
+  quilt
 
 Canonical homepage:
   http://www.holgerschurig.de/patcher.html
