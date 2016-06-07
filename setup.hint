@@ -1,3 +1,4 @@
+# ARCH=noarch
 sdesc: "Perl script To manage patches"
 ldesc: "A patch manager that keeps track of which files you
 change. It  then can generate patches  from your changes,  no need for
