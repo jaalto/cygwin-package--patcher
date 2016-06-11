@@ -7,4 +7,4 @@ series, they define  the order they have to  be applied. Patcher keeps
 series information as  well as information of which  patches have been
 applied and which not."
 category: Utils Perl
-requires: cygwin perl
+requires: perl
